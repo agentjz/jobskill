@@ -17,24 +17,24 @@
 
 | Skill | 内容 |
 | --- | --- |
-| [资质录入时用](./skills/资质录入时用/SKILL.md) | 资质录入时用 |
-| [资质代码](./skills/资质代码/SKILL.md) | 资质代码表 |
-| [特殊机场资格代码](./skills/特殊机场资格代码/SKILL.md) | 特殊机场资格代码表 |
-| [如何统计当前有效EAMA资质](./skills/如何统计当前有效EAMA资质/SKILL.md) | 当前有效 EAMA 资质人员统计流程 |
-| [技术等级变更统计](./skills/技术等级变更统计/SKILL.md) | 技术等级变更信息统计流程 |
-| [飞行门户资质发布流程](./skills/飞行门户资质发布流程/SKILL.md) | 飞行门户资质发布流程 |
-| [副驾驶资质笔记](./skills/副驾驶资质笔记/SKILL.md) | 副驾驶本场训练、120 天 100 小时、航线检查等笔记 |
-| [机长资质笔记](./skills/机长资质笔记/SKILL.md) | 机长 60 天要求、一检二检、机长分级等笔记 |
-| [教员资质笔记](./skills/教员资质笔记/SKILL.md) | 教员分类、B 教、教员资格有效期等笔记 |
-| [重新获得资格训练](./skills/重新获得资格训练/SKILL.md) | 重新获得资格训练和熟练检查不合格处理 |
+| [资质录入时用](./skills/01/SKILL.md) | 资质录入时用 |
+| [资质代码](./skills/02/SKILL.md) | 资质代码表 |
+| [特殊机场资格代码](./skills/03/SKILL.md) | 特殊机场资格代码表 |
+| [如何统计当前有效EAMA资质](./skills/04/SKILL.md) | 当前有效 EAMA 资质人员统计流程 |
+| [技术等级变更统计](./skills/05/SKILL.md) | 技术等级变更信息统计流程 |
+| [飞行门户资质发布流程](./skills/06/SKILL.md) | 飞行门户资质发布流程 |
+| [副驾驶资质笔记](./skills/07/SKILL.md) | 副驾驶本场训练、120 天 100 小时、航线检查等笔记 |
+| [机长资质笔记](./skills/08/SKILL.md) | 机长 60 天要求、一检二检、机长分级等笔记 |
+| [教员资质笔记](./skills/09/SKILL.md) | 教员分类、B 教、教员资格有效期等笔记 |
+| [重新获得资格训练](./skills/10/SKILL.md) | 重新获得资格训练和熟练检查不合格处理 |
 
 ## 目录
 
 | 路径 | 用途 |
 | --- | --- |
 | `index.html` | GitHub Pages 入口 |
-| `skills/<skill-name>/SKILL.md` | skill 正文 |
-| `skills/<skill-name>/assets/` | skill 图片和附件 |
+| `skills/01` 到 `skills/10` | skill 正文和附件 |
+| `SKILL_INDEX.md` | skill 维护索引 |
 | `css/site.css` | 页面样式 |
 | `js/skills.js` | skill 索引 |
 | `js/site.js` | Markdown 加载和渲染 |
