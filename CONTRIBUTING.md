@@ -1,25 +1,44 @@
-# 贡献指南
+# 维护指南
 
-本仓库维护 Markdown skill。
+这个项目用来沉淀飞行部日常工作中会反复用到的 skill。
 
-## Skill 结构
+维护时只写当前正在使用的做法。内容要准确、直接，方便别人打开页面后马上查询和使用。
 
-```text
-skills/
-  示例skill/
-    SKILL.md
-    assets/
-      image.png
-```
+## 适合补充的内容
 
-## 修改流程
+可以稳定复用。
 
-1. 修改对应 `skills/<skill>/SKILL.md`。
-2. 新主题新建 `skills/<skill>/SKILL.md`。
-3. 图片和附件放入所属 skill 目录。
-4. 更新根目录 `README.md` 的 skill 索引。
-5. 运行检查脚本。
+可以减少重复查询。
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\check-markdown-assets.ps1
-```
+可以明确当前口径。
+
+可以帮助别人直接完成同类工作。
+
+## 修改原则
+
+只写当前有效内容。
+
+不确定的内容先确认，不把猜测写进去。
+
+同一个主题尽量放在同一个 skill 里。
+
+别人提供的原文，如果没有要求整理，就按原文记录。
+
+不要把旧做法、废弃入口、历史处理方式写进正文。
+
+## 提交内容时请说明
+
+- 改的是哪个 skill。
+- 新增或修改了哪条内容。
+- 内容来源是什么。
+- 是否有截图、表格或系统页面可以对应。
+
+## 页面入口
+
+项目页面：
+
+https://agentjz.github.io/jobskill/
+
+GitHub 仓库：
+
+https://github.com/agentjz/jobskill

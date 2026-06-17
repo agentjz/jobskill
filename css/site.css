@@ -1,13 +1,97 @@
 body {
-  max-width: 900px;
-  margin: 24px auto;
-  padding: 0 16px;
-  font-family: sans-serif;
+  background: #f8f9fa;
   line-height: 1.6;
 }
 
-#skillList a {
-  font-size: 20px;
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#skillList .nav-link {
+  color: #212529;
+  font-size: 17px;
+  padding: 7px 9px;
+  border-radius: 6px;
+}
+
+#skillList .nav-link.active {
+  color: #0d6efd;
+  font-weight: 600;
+  background: #e7f1ff;
+}
+
+.content {
+  max-width: 980px;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.hero {
+  max-width: 980px;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.hero-title {
+  margin: 0 0 10px;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.hero-text {
+  color: #495057;
+  font-size: 16px;
+}
+
+.hero-meta {
+  color: #495057;
+  font-size: 14px;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.icon-button svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.sidebar-brand {
+  line-height: 1.35;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #495057;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.sidebar-link:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+.sidebar-link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex: 0 0 auto;
 }
 
 img {
@@ -16,15 +100,34 @@ img {
 }
 
 table {
+  width: 100%;
   border-collapse: collapse;
+  margin: 1rem 0;
 }
 
 th,
 td {
   border: 1px solid #ccc;
-  padding: 4px 8px;
+  padding: 6px 8px;
 }
 
 pre {
   overflow: auto;
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: static;
+    height: auto;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .hero,
+  .content {
+    padding: 18px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
 }

@@ -34,7 +34,8 @@
 | --- | --- |
 | `index.html` | GitHub Pages 入口 |
 | `skills/01` 到 `skills/10` | skill 正文和附件 |
-| `SKILL_INDEX.md` | skill 维护索引 |
+| `CONTRIBUTING.md` | 维护指南 |
+| `SKILL_INDEX.md` | skill 索引 |
 | `css/site.css` | 页面样式 |
 | `js/skills.js` | skill 索引 |
 | `js/site.js` | Markdown 加载和渲染 |

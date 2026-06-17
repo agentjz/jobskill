@@ -1,7 +1,9 @@
 (function () {
   const items = window.JOBSKILL_ITEMS || [];
+  const guideItem = ["维护指南", "CONTRIBUTING.md"];
   const list = document.getElementById("skillList");
   const content = document.getElementById("content");
+  const skillCount = document.getElementById("skillCount");
 
   function hashName() {
     try {
@@ -70,20 +72,28 @@
       const a = document.createElement("a");
       a.href = "#" + encodeURIComponent(name);
       a.textContent = name;
+      a.className = "nav-link";
+      a.dataset.skillName = name;
       list.appendChild(a);
-      list.appendChild(document.createElement("br"));
+    });
+  }
+
+  function markActive(name) {
+    list.querySelectorAll(".nav-link").forEach((link) => {
+      link.classList.toggle("active", link.dataset.skillName === name);
     });
   }
 
   async function loadSkill() {
     const name = hashName() || (items[0] && items[0][0]);
-    const item = items.find(([itemName]) => itemName === name) || items[0];
+    const item = [...items, guideItem].find(([itemName]) => itemName === name) || items[0];
     if (!item) {
       content.textContent = "没有 skill。";
       return;
     }
 
     document.title = item[0];
+    markActive(item[0]);
     content.textContent = "正在加载...";
 
     try {
@@ -99,6 +109,9 @@
   }
 
   renderList();
+  if (skillCount) {
+    skillCount.textContent = String(items.length);
+  }
   window.addEventListener("hashchange", loadSkill);
   loadSkill();
 })();
