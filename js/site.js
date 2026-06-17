@@ -3,7 +3,7 @@
   const guideItem = ["维护指南", "CONTRIBUTING.md"];
   const list = document.getElementById("skillList");
   const content = document.getElementById("content");
-  const skillCount = document.getElementById("skillCount");
+  const sidebarMenu = document.getElementById("sidebarMenu");
 
   function hashName() {
     try {
@@ -28,6 +28,18 @@
       img.setAttribute("src", base + src.replace(/^\.\//, ""));
     });
     return template.innerHTML;
+  }
+
+  function wrapTables() {
+    content.querySelectorAll("table").forEach((table) => {
+      if (table.parentElement && table.parentElement.classList.contains("table-wrap")) {
+        return;
+      }
+      const wrapper = document.createElement("div");
+      wrapper.className = "table-wrap";
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
   }
 
   function escapeTableCell(value) {
@@ -78,6 +90,14 @@
     });
   }
 
+  function closeMobileMenu() {
+    if (!sidebarMenu || window.innerWidth >= 768 || !window.bootstrap) {
+      return;
+    }
+    const collapse = window.bootstrap.Collapse.getOrCreateInstance(sidebarMenu, { toggle: false });
+    collapse.hide();
+  }
+
   function markActive(name) {
     list.querySelectorAll(".nav-link").forEach((link) => {
       link.classList.toggle("active", link.dataset.skillName === name);
@@ -103,15 +123,14 @@
       }
       const markdown = await response.text();
       content.innerHTML = fixImages(marked.parse(frontmatterToTable(markdown)), basePath(item[1]));
+      wrapTables();
     } catch (error) {
       content.textContent = error.message;
     }
   }
 
   renderList();
-  if (skillCount) {
-    skillCount.textContent = String(items.length);
-  }
+  list.addEventListener("click", closeMobileMenu);
   window.addEventListener("hashchange", loadSkill);
   loadSkill();
 })();

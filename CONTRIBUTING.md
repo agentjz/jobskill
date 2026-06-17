@@ -42,3 +42,7 @@ https://agentjz.github.io/jobskill/
 GitHub 仓库：
 
 https://github.com/agentjz/jobskill
+
+## 友情链接
+
+<a href="https://agentjz.github.io/ohmyflight/" target="_blank" rel="noreferrer">ohmyflight</a>
