@@ -32,7 +32,7 @@ owner 给出要写入 skill 的原文时，按原文字句写入。
 
 - `index.html`：GitHub Pages 页面入口。
 - `js/skills.js`：页面左侧导航和加载顺序。
-- `skills/01` 到 `skills/10`：当前 skill 正文和附件。
+- `skills/01` 到 `skills/06`：当前 skill 正文和附件。
 - `README.md`：项目首页说明。
 - `SKILL_INDEX.md`：数字目录和 skill 名称索引。
 - `CONTRIBUTING.md`：给普通维护者看的维护指南。

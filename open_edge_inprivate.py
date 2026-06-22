@@ -1,0 +1,1 @@
+import pathlib, subprocess, sys, time; root = pathlib.Path(__file__).resolve().parent; subprocess.Popen([sys.executable, "-m", "http.server", "8000"], cwd=root); time.sleep(1); subprocess.Popen(["cmd", "/c", "start", "", "msedge", "--inprivate", "http://localhost:8000"])
